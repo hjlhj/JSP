@@ -1,0 +1,88 @@
+FunWeb.txt
+
+ - 요구사항 분석
+ - 화면구상/와이어프레임 구상
+ - 테이블 생성
+ - 개발시작
+ 
+  
+   사용자 요청(request) -> web.xml -> Controller -> Model(action+DAO) - DB 
+  										  |
+  										  View(템플릿)		
+  
+   * 회원 관리
+     회원가입
+     로그인
+     메인페이지
+     정보 조회
+     정보 수정
+     정보 삭제
+     정보 리스트 확인
+     
+    
+    * 쇼핑몰 
+    - 상품등록
+    - 상품조회
+    - 상품 상세페이지
+    - 구매
+    - 결재(API)
+    - 장바구니
+     
+     
+     
+     
+     
+     
+     CREATE TABLE `jspdb`.`itwill_goods` (
+  `gno` INT NOT NULL,
+  `category` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `content` VARCHAR(500) NULL,
+  `size` VARCHAR(45) NULL,
+  `color` VARCHAR(45) NULL,
+  `amount` INT NULL,
+  `price` INT NULL,
+  `image` VARCHAR(1000) NULL,
+  `best` INT NULL,
+  `date` TIMESTAMP NOT NULL DEFAULT now(),
+  PRIMARY KEY (`gno`));
+     
+   
+   * 도메인 (domain)
+    프로젝트 주제를 구성하는 중요 명사
+    
+    쇼핑몰 => 회원,상품,게시판,주문,배송,.... (1차 도메인) 테이블
+           => 회원가/비회원가
+   
+   
+   CREATE TABLE `jspdb`.`itwill_basket` (
+  `b_num` INT NOT NULL,
+  `b_m_id` VARCHAR(45) NOT NULL,
+  `b_g_num` INT NOT NULL,
+  `b_g_amount` INT NOT NULL,
+  `b_g_size` VARCHAR(45) NOT NULL,
+  `b_g_color` VARCHAR(45) NOT NULL,
+  `b_date` TIMESTAMP NOT NULL DEFAULT now(),
+  PRIMARY KEY (`b_num`));
+   
+   
+------------------------------------------------------------
+   
+   totalList - 0 
+
+ basketList 
+   [0][1][][][][][][][][][]
+
+------------------------------------------------------------
+totalList - 1 
+
+ goodsList
+    [0][1][][][][][][][][][]
+   
+------------------------------------------------------------
+   
+   
+   
+   
+   
+ 
