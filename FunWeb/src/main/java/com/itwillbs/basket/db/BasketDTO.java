@@ -4,8 +4,6 @@ import java.sql.Timestamp;
 
 import lombok.Data;
 
-
-
 //@Data : DTO 객체 생성에 필요한 모든 동작을 자동 구현
 //@Setter : set() 자동생성
 //@Getter : get() 자동생성

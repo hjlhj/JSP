@@ -54,6 +54,21 @@ public class BasketFrontController extends HttpServlet{
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/BasketDeleteAction.ba")) {
+			System.out.println(" C : /BasketDeleteAction.ba 호출");
+			System.out.println(" C : [패턴 2] ");
+			
+			// BasketDeleteAction() 객체 생성
+			action = new BasketDeleteAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
 		
 		System.out.println(" C : 2. 가상주소 매핑 끝");
 		
